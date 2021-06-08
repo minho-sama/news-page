@@ -11,10 +11,25 @@
     align-items: center;
 }
 
+@mixin button{
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    color:white;
+    background: #567b95;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 12px;
+    border: none;
+    cursor:pointer;
+}
+
 $text-grey: #666;
+$main-content-margin: auto 22%;
 
 nav{
-    position:fixed;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
     width: 100%;
     border-top: 1px solid rgb(184, 184, 184);
     border-bottom: 1px solid rgb(184,184,184);
@@ -41,15 +56,7 @@ nav{
         right: 30px;
         gap: 30px;
         button{
-            font-family: nyt-franklin, helvetica, arial, sans-serif;
-            color:white;
-            background: #567b95;
-            padding: 10px;
-            border-radius: 3px;
-            font-weight: 600;
-            font-size: 12px;
-            border: none;
-            cursor:pointer;
+            @include button();
         }
     }
     img{
@@ -91,7 +98,6 @@ article{
             }
         }
         #author{
-            // border: 2px solid red;
             margin:20px 22%;
             padding-top: 15px;
             position:relative;
@@ -110,7 +116,7 @@ article{
             }
         }
         .main-content{
-            margin: auto 22%;
+            margin: $main-content-margin;
             font-size: 20px;
             p{
                 margin: 30px auto;
@@ -160,9 +166,67 @@ article{
                 margin-top: 20px;
             }
         }
+        #iframe{
+            grid-column: 2/3;
+            margin: $main-content-margin;
+            @include flex-center();
+            iframe{
+                width : 100%;
+                height: 300px;
+            }
+            figcaption{
+                width: 100%;
+                color:rgb(71, 71, 71);
+            }
+            
+        }
+        #article-footer{
+            margin:20px 22%;
+            position:relative;
+            h3{
+                font-family: nyt-franklin, helvetica, arial, sans-serif;
+                margin-bottom: 15px;
+                font-size: 13px;
+                font-weight: 500;
+            }
+            button{
+                @include button();
+                padding: 2px;
+                border-radius: 4px;
+                letter-spacing: 2px;
+            }
+            ul{
+                position:absolute;
+                bottom: 0;
+                right: 5px;
+                li{
+                    list-style: none;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 } 
 
+footer{
+    border: 2px solid red;
+    width: 100%;
+    display:grid;
+    grid-template-columns: 4fr 1fr;
+    margin-top: 4%;
+    .list-container{
+        color:red;
+        grid-column: 1/2;
+        display:flex;
+    }
+    aside{
+        color:blue;
+        grid-column: 2/3;
+        div:nth-child(odd){
+            border-bottom: 2px solid red;
+        }
+    }
+}
 
 @media screen and (max-width: 800px) {
     nav{
