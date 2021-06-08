@@ -80,7 +80,6 @@ article div {
 }
 
 article div #cover {
-  border: 2px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,7 +131,7 @@ article div #cover figure figcaption span {
 }
 
 article div #author {
-  margin: 20px 13%;
+  margin: 20px 22%;
   padding-top: 15px;
   position: relative;
 }
@@ -150,16 +149,86 @@ article div #author ul {
 
 article div #author ul li {
   list-style: none;
+  cursor: pointer;
 }
 
-article div #main-content {
-  border: 2px solid red;
-  margin: auto 13%;
+article div .main-content {
+  margin: auto 22%;
   font-size: 20px;
 }
 
-article div #main-content p {
+article div .main-content p {
   margin: 30px auto;
+}
+
+article div #inflation-theory {
+  width: 80vw;
+  font-size: 13px;
+  margin: 7% auto;
+}
+
+article div #inflation-theory header {
+  margin: 10px auto;
+}
+
+article div #inflation-theory header h1, article div #inflation-theory header p {
+  margin: 20px auto;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+}
+
+article div #inflation-theory header p {
+  margin-bottom: 3%;
+}
+
+article div #inflation-theory ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5px;
+}
+
+article div #inflation-theory ul li {
+  border: 2px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 24%;
+}
+
+article div #inflation-theory ul li img {
+  width: 80%;
+  margin-bottom: 2px;
+}
+
+article div #inflation-theory ul li p {
+  color: #313131;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode','Lucida Sans', Arial, sans-serif;
+  width: 80%;
+}
+
+article div #inflation-theory ul li p span {
+  font-weight: 600;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+}
+
+article div #inflation-theory .margin-fix {
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 800px) {

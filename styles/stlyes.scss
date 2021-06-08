@@ -64,7 +64,6 @@ article{
     div{
         grid-column: 2/3;
         #cover{
-            border: 2px solid red;
             @include flex-center;
             h1{
                 font-size: 2.5em;
@@ -93,7 +92,7 @@ article{
         }
         #author{
             // border: 2px solid red;
-            margin:20px 13%;
+            margin:20px 22%;
             padding-top: 15px;
             position:relative;
             h3{
@@ -106,18 +105,60 @@ article{
                 right: 5px;
                 li{
                     list-style: none;
+                    cursor: pointer;
                 }
             }
         }
-        #main-content{
-            border: 2px solid red;
-            margin: auto 13%;
+        .main-content{
+            margin: auto 22%;
             font-size: 20px;
             p{
                 margin: 30px auto;
             }
-
-            // 8 picses résznél overflow -> width: 90vw;
+        }
+        #inflation-theory{
+            width: 80vw;
+            font-size: 13px;
+            margin: 7% auto;
+            header{
+                margin: 10px auto;
+                h1, p{
+                    margin: 20px auto;
+                    font-family: nyt-franklin, helvetica, arial, sans-serif;
+                }
+                p{
+                    margin-bottom: 3%;
+                }
+            }
+            ul{
+                display:flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                // flex-basis:content;
+                gap: 5px;
+                li{
+                    border: 2px solid white;
+                    @include flex-center();
+                    justify-content: center;
+                    width: 24%;
+                    img{
+                        width: 80%;
+                        margin-bottom: 2px;
+                    }
+                    p{
+                        color: rgb(49, 49, 49);
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode','Lucida Sans', Arial, sans-serif;
+                        width: 80%;
+                        span{
+                            font-weight: 600;
+                            font-family: nyt-franklin, helvetica, arial, sans-serif;
+                        }
+                    }
+                }
+            }
+            .margin-fix{
+                margin-top: 20px;
+            }
         }
     }
 } 
@@ -137,6 +178,17 @@ article{
             h1{
                 // font-size: 15px;
                 //FONT SIZE NEM MŰKÖDIK
+            }
+        }
+        .main-content{
+
+        }
+        #inflation-theory{
+            ul{
+                li{
+                    // // width: 50%;
+                    // nem működik
+                }
             }
         }
     }
