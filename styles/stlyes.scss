@@ -2,7 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: georgia,'times new roman',times,serif;
 }
+
+@mixin flex-center{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+$text-grey: #666;
 
 nav{
     position:fixed;
@@ -32,6 +41,7 @@ nav{
         right: 30px;
         gap: 30px;
         button{
+            font-family: nyt-franklin, helvetica, arial, sans-serif;
             color:white;
             background: #567b95;
             padding: 10px;
@@ -47,17 +57,100 @@ nav{
     }
 }
 
-body{
-    
-}
+article{
+    display:grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    margin-top: 4%;
+    div{
+        grid-column: 2/3;
+        #cover{
+            border: 2px solid red;
+            @include flex-center;
+            h1{
+                font-size: 2.5em;
+                font-weight: 500;
+                font-style: italic;
+                margin: 10px auto 20px;
+            }
+            figure{
+                @include flex-center;
+                width: 70vw;
+                font-size: 15px;
+                text-align: left;
+                img{
+                    width: 70vw;
+                }
+                figcaption{
+                    margin: 10px auto;
+                    padding-right: 100px;
+                    color: rgb(71, 71, 71);
+                    span{
+                        color: $text-grey;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        #author{
+            // border: 2px solid red;
+            margin:20px 13%;
+            padding-top: 15px;
+            position:relative;
+            h3{
+                font-family: nyt-franklin, helvetica, arial, sans-serif;
+                margin-bottom: 15px;
+            }
+            ul{
+                position:absolute;
+                bottom: 0;
+                right: 5px;
+                li{
+                    list-style: none;
+                }
+            }
+        }
+        #main-content{
+            border: 2px solid red;
+            margin: auto 13%;
+            font-size: 20px;
+            p{
+                margin: 30px auto;
+            }
+
+            // 8 picses résznél overflow -> width: 90vw;
+        }
+    }
+} 
+
 
 @media screen and (max-width: 800px) {
     nav{
-        .flex{
+        .icon-wrapper{
             gap: 35px;
         }
         button:nth-child(odd){
             display:none;
         }
     }
-  }
+    article{
+        #cover{
+            h1{
+                // font-size: 15px;
+                //FONT SIZE NEM MŰKÖDIK
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    nav{
+        .flex{
+            i:nth-child(even){
+                display:none;
+            }
+        }
+        .button-container{
+            display:none;
+        }
+    }
+}
