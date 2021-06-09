@@ -7,6 +7,11 @@
 }
 
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 100;
   width: 100%;
   border-top: 1px solid #b8b8b8;
   border-bottom: 1px solid #b8b8b8;
@@ -20,7 +25,6 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
 }
 
 nav .flex {
@@ -69,7 +73,7 @@ article {
   display: grid;
   -ms-grid-columns: 1fr 10fr 1fr;
       grid-template-columns: 1fr 10fr 1fr;
-  margin-top: 4%;
+  margin-top: 8%;
 }
 
 article div {
@@ -300,7 +304,7 @@ footer {
   border-top: 1px solid #b9b9b9;
   border-bottom: 1px solid #b9b9b9;
   width: 84%;
-  margin: 4% 8% 2%;
+  margin: 4% auto 2%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 5fr 2fr;
