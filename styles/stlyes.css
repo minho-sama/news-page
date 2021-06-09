@@ -92,7 +92,7 @@ article div #cover {
 }
 
 article div #cover h1 {
-  font-size: 2.5em;
+  font-size: 5vh;
   font-weight: 500;
   font-style: italic;
   margin: 10px auto 20px;
@@ -255,6 +255,7 @@ article div #iframe iframe {
 article div #iframe figcaption {
   width: 100%;
   color: #474747;
+  margin-top: 10px;
 }
 
 article div #article-footer {
@@ -296,42 +297,103 @@ article div #article-footer ul li {
 }
 
 footer {
-  border: 2px solid red;
-  width: 100%;
+  border-top: 1px solid #b9b9b9;
+  border-bottom: 1px solid #b9b9b9;
+  width: 84%;
+  margin: 4% 8% 2%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 4fr 1fr;
-      grid-template-columns: 4fr 1fr;
-  margin-top: 4%;
+  -ms-grid-columns: 5fr 2fr;
+      grid-template-columns: 5fr 2fr;
+  padding: 10px;
+}
+
+footer img {
+  width: 180px;
+  margin-bottom: 15px;
 }
 
 footer .list-container {
-  color: red;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8%;
+  margin-top: 10px;
+}
+
+footer .list-container h1 {
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  font-size: 16px;
+}
+
+footer .list-container li {
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  list-style: none;
+  cursor: pointer;
+  font-size: 15px;
+  margin: 10px auto;
+}
+
+footer .list-container li:hover {
+  text-decoration: underline;
 }
 
 footer aside {
-  color: blue;
+  border-left: 1px solid black;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
 }
 
-footer aside div:nth-child(odd) {
-  border-bottom: 2px solid red;
+footer aside h1 {
+  font-size: 15px;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
 }
 
-@media screen and (max-width: 800px) {
+footer aside a {
+  display: block;
+  color: black;
+  font-weight: 600;
+  margin: 8px auto;
+}
+
+footer aside div:nth-child(odd) {
+  border-bottom: 1px solid black;
+}
+
+footer aside div:nth-child(odd) ul {
+  margin-top: 10px;
+}
+
+footer aside div {
+  margin-left: 5px;
+}
+
+footer aside div ul li {
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  list-style: none;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+footer aside div ul li:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 800px) {
   nav .icon-wrapper {
     gap: 35px;
   }
   nav button:nth-child(odd) {
     display: none;
+  }
+  article .main-content {
+    margin: auto 5px;
   }
 }
 

@@ -73,7 +73,7 @@ article{
         #cover{
             @include flex-center;
             h1{
-                font-size: 2.5em;
+                font-size: 5vh;
                 font-weight: 500;
                 font-style: italic;
                 margin: 10px auto 20px;
@@ -140,7 +140,6 @@ article{
                 display:flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                // flex-basis:content;
                 gap: 5px;
                 li{
                     border: 2px solid white;
@@ -177,6 +176,7 @@ article{
             figcaption{
                 width: 100%;
                 color:rgb(71, 71, 71);
+                margin-top: 10px;
             }
             
         }
@@ -209,26 +209,77 @@ article{
 } 
 
 footer{
-    border: 2px solid red;
-    width: 100%;
+    border-top: 1px solid rgb(185, 185, 185);
+    border-bottom: 1px solid rgb(185, 185, 185);
+    width: 84%;
+    margin: 4% 8% 2%;
     display:grid;
-    grid-template-columns: 4fr 1fr;
-    margin-top: 4%;
+    grid-template-columns: 5fr 2fr;
+    padding: 10px;
+    img{
+        width: 180px;
+        margin-bottom: 15px;
+    }
     .list-container{
-        color:red;
         grid-column: 1/2;
         display:flex;
+        flex-wrap:wrap;
+        gap: 8%;
+        // justify-content:space-evenly;
+        margin-top: 10px;
+        h1{
+            font-family: nyt-franklin, helvetica, arial, sans-serif;
+            font-size: 16px;
+        }
+        li{
+            font-family: nyt-franklin, helvetica, arial, sans-serif;
+            list-style: none;
+            cursor: pointer;
+            font-size: 15px;
+            margin: 10px auto;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
     }
     aside{
-        color:blue;
+        border-left: 1px solid black;
         grid-column: 2/3;
+        h1{
+            font-size: 15px;
+            font-family: nyt-franklin, helvetica, arial, sans-serif;
+        }
+        a{
+            display: block;
+            color:black;
+            font-weight: 600;
+            margin: 8px auto;
+        }
         div:nth-child(odd){
-            border-bottom: 2px solid red;
+            border-bottom: 1px solid black;
+
+            ul{
+                margin-top: 10px;
+            }
+        }
+        div{
+            margin-left: 5px;
+            ul{
+                li{
+                    font-family: nyt-franklin, helvetica, arial, sans-serif;
+                    list-style: none;
+                    margin: 10px auto;
+                    cursor: pointer;
+                    &:hover{
+                        text-decoration: underline;;
+                    }
+                }
+            }
         }
     }
 }
 
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     nav{
         .icon-wrapper{
             gap: 35px;
@@ -238,22 +289,8 @@ footer{
         }
     }
     article{
-        #cover{
-            h1{
-                // font-size: 15px;
-                //FONT SIZE NEM MŰKÖDIK
-            }
-        }
         .main-content{
-
-        }
-        #inflation-theory{
-            ul{
-                li{
-                    // // width: 50%;
-                    // nem működik
-                }
-            }
+            margin: auto 5px;
         }
     }
 }
